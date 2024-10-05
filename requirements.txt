@@ -355,26 +355,15 @@ pynacl==1.5.0
     # via paramiko
 pynput==1.7.7
     # via -r reqs.in
-pyobjc-core==10.3.1
-    # via
-    #   pyobjc-framework-applicationservices
-    #   pyobjc-framework-cocoa
-    #   pyobjc-framework-coretext
-    #   pyobjc-framework-quartz
-pyobjc-framework-applicationservices==10.3.1
-    # via pynput
-pyobjc-framework-cocoa==10.3.1
-    # via
-    #   pyobjc-framework-applicationservices
-    #   pyobjc-framework-coretext
-    #   pyobjc-framework-quartz
-pyobjc-framework-coretext==10.3.1
-    # via pyobjc-framework-applicationservices
-pyobjc-framework-quartz==10.3.1
-    # via
-    #   pynput
-    #   pyobjc-framework-applicationservices
-    #   pyobjc-framework-coretext
+
+# macOS specific dependencies
+pyobjc-core==10.3.1 ; sys_platform == "darwin"
+pyobjc-framework-applicationservices==10.3.1 ; sys_platform == "darwin"
+pyobjc-framework-cocoa==10.3.1 ; sys_platform == "darwin"
+pyobjc-framework-coretext==10.3.1 ; sys_platform == "darwin"
+pyobjc-framework-quartz==10.3.1 ; sys_platform == "darwin"
+pynput==1.7.7 ; sys_platform == "darwin"
+
 pyparsing==3.1.4
     # via httplib2
 pypdf==4.3.1
