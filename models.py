@@ -12,8 +12,12 @@ from langchain_mistralai import ChatMistralAI
 from pydantic.v1.types import SecretStr
 
 
+
+
 # Load environment variables
 load_dotenv()
+
+
 
 # Configuration
 DEFAULT_TEMPERATURE = 0.0
